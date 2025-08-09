@@ -6,15 +6,20 @@
         <p>Une cuisine authentique et raffinée</p>
       </div>
       <div class="footer-section">
-        <h3>Horaires</h3>
-        <p>Lundi - Vendredi: 12h - 14h30 | 19h - 22h30</p>
-        <p>Samedi - Dimanche: 12h - 15h | 19h - 23h</p>
+        <h3>HORAIRES</h3>
+        <p>LUNDI : 8h30 - 20h30</p>
+        <p>MARDI : 10h00 - 15h00</p>
+        <p>MERCREDI : FERMÉ</p>
+        <p>JEUDI : 10H00 - 15H00 / 18h00 - 20h30</p>
+        <p>VENDREDI : 10H00 - 15H00 / 18H00 - 21h00</p>
+        <p>SAMEDI : 10H00 - 21h00</p>
+        <p>DIMANCHE : 10H00 - 20h30</p>
       </div>
       <div class="footer-section">
         <h3>Contact</h3>
-        <p>123 Rue de la Halle</p>
-        <p>75001 Paris, France</p>
-        <p>Tél: 01 23 45 67 89</p>
+        <p>Place Isaac Benserade</p>
+        <p>27480 Lyons-la-Forêt, France</p>
+        <p>Tél: 02 32 49 49 92</p>
       </div>
     </div>
     <div class="footer-bottom">
