@@ -29,9 +29,7 @@
 
 <style scoped>
 .footer {
-  background-color: #1a1a1a;
-  color: white;
-  padding: 2rem 0;
+  color: var(--text-color);
   margin-top: 2rem;
 }
 
@@ -51,7 +49,6 @@
 }
 
 .footer-section h3 {
-  color: #e0a80d;
   margin-bottom: 1rem;
 }
 
@@ -61,9 +58,6 @@
 
 .footer-bottom {
   text-align: center;
-  padding-top: 1.5rem;
-  margin-top: 1.5rem;
-  border-top: 1px solid #333;
 }
 
 @media (max-width: 768px) {

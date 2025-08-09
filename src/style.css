@@ -27,7 +27,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --background-color: #fefee2;
+  --background-color: #f3ffff;
+  --background-color-var: #dfecec;
   --text-color: #000;
 }
 
