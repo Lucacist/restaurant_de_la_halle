@@ -97,10 +97,31 @@ const closeMenu = () => {
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--text-color);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 30%;
+}
+
+.nav-link.router-link-active::after {
+  width: 100%;
 }
 
 .nav-link:hover {
-  color: #e0a80d;
+  color: var(--text-color);
 }
 
 /* Burger menu styles */
