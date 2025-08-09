@@ -15,16 +15,13 @@
         <div class="about-content">
           <div class="about-text">
             <p>
-              Le Restaurant de la Halle vous accueille dans un cadre chaleureux et élégant pour vous faire découvrir une cuisine française raffinée, préparée avec des produits frais et de saison.
-            </p>
+              RESTAURANT DE LA HALLE est un établissement familial situé au cœur de Lyons-la-Forêt, en Normandie. Depuis notre ouverture, nous nous engageons à offrir à nos clients une expérience culinaire exceptionnelle, en mettant l'accent sur des produits frais et de saison.</p>
             <p>
-              Notre chef et son équipe mettent tout leur savoir-faire à votre service pour vous offrir une expérience gastronomique inoubliable.
-            </p>
+              Notre équipe de professionnels passionnés travaille chaque jour pour vous proposer des plats savoureux et raffinés, dans une ambiance chaleureuse et conviviale. Que ce soit pour un déjeuner rapide, un dîner romantique ou une célébration spéciale, nous sommes là pour faire de chaque repas un moment inoubliable.</p>
             <router-link to="/contact" class="text-link">Réserver une table</router-link>
           </div>
           <div class="about-image">
-            <!-- Placeholder pour une image -->
-            <div class="image-placeholder">Image du restaurant</div>
+            <img  class="image-placeholder"src="/img/presentation_restau.webp" alt="">
           </div>
         </div>
       </div>
@@ -32,31 +29,27 @@
     
     <section class="specialties-section">
       <div class="container">
-        <h2>Nos spécialités</h2>
         <div class="specialties-grid">
           <div class="specialty-card">
             <div class="specialty-image">
-              <!-- Placeholder pour une image -->
-              <div class="image-placeholder">Image du plat</div>
+              <img class="image-placeholder2" src="/img/plat1.webp" alt="">
             </div>
-            <h3>Entrées raffinées</h3>
-            <p>Découvrez nos entrées préparées avec des produits frais et de saison.</p>
+            <h3>Cuisine Normande</h3>
+            <p>Savourez des plats authentiques préparés avec des produits locaux et de saison.</p>
           </div>
           <div class="specialty-card">
             <div class="specialty-image">
-              <!-- Placeholder pour une image -->
-              <div class="image-placeholder">Image du plat</div>
+              <img class="image-placeholder2" src="/img/plat2.webp" alt="">
             </div>
-            <h3>Plats signature</h3>
-            <p>Savourez nos plats signature, alliant tradition et créativité.</p>
+            <h3>Menus du jour</h3>
+            <p>Découvrez nos menus du jour, élaborés à partir d'ingrédients frais pour des saveurs exceptionnelles.</p>
           </div>
           <div class="specialty-card">
             <div class="specialty-image">
-              <!-- Placeholder pour une image -->
-              <div class="image-placeholder">Image du plat</div>
+              <img class="image-placeholder2" src="/img/plat3.webp" alt="">
             </div>
-            <h3>Desserts exquis</h3>
-            <p>Terminez votre repas en beauté avec nos desserts faits maison.</p>
+            <h3>Événements privés</h3>
+            <p>Organisez vos événements privés dans un cadre chaleureux avec des solutions sur mesure.</p>
           </div>
         </div>
       </div>
@@ -156,7 +149,7 @@ section h2 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  color: #333;
+  color: var(--text-color);
 }
 
 .about-content {
@@ -176,17 +169,41 @@ section h2 {
 }
 
 .text-link {
-  color: #e0a80d;
+  color: var(--text-color);
   font-weight: bold;
+  border-radius: 2px;
+  border: 2px solid var(--text-color);
+  padding: 0.5rem 1rem;
   text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.text-link::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--text-color);
+  transition: top 0.3s ease;
+  z-index: -1;
 }
 
 .text-link:hover {
-  text-decoration: underline;
+  color: var(--background-color);
+}
+
+.text-link:hover::before {
+  top: 0;
 }
 
 .about-image {
-  flex: 1;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 .image-placeholder {
@@ -197,6 +214,10 @@ section h2 {
   justify-content: center;
   color: #666;
   font-style: italic;
+}
+
+.image-placeholder2 {
+  height: 500px;
 }
 
 .specialties-grid {
@@ -224,12 +245,18 @@ section h2 {
 .specialty-card h3 {
   padding: 1rem;
   margin: 0;
-  color: #e0a80d;
+  color: var(--text-color);
 }
 
 .specialty-card p {
   padding: 0 1rem 1.5rem;
   margin: 0;
+}
+
+@media (max-width: 950px) {
+  .about-content {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 768px) {
@@ -239,10 +266,6 @@ section h2 {
   
   .hero p {
     font-size: 1.2rem;
-  }
-  
-  .about-content {
-    flex-direction: column;
   }
   
   .specialties-grid {
