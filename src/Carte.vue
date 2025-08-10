@@ -66,7 +66,6 @@ const currentLanguage = ref('fr');
 
 <style scoped>
 .carte {
-  padding: 2rem 0;
   color: var(--text-color);
 }
 
@@ -84,23 +83,50 @@ const currentLanguage = ref('fr');
 .language-selector {
   display: flex;
   justify-content: center;
-  gap: 0.5rem;
-  margin-top: 1.5rem;
+  gap: 2rem;
+  padding: 0.8rem 2rem;
+  background-color: var(--background-color-var);
+  margin-top: 2rem;
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .lang-button {
-  padding: 0.5rem 1rem;
+  padding: 0 0.2rem;
+  width: auto;
   background-color: transparent;
-  border: 1px solid var(--accent-color);
+  border: none;
+  border-radius: 0;
   color: var(--text-color);
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
 
 .lang-button.active {
+border-bottom: 2px solid var(--text-color);
+}
+
+button:focus {
+  outline: none;
+}
+
+.lang-button.active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: var(--accent-color);
-  color: white;
+  z-index: -1;
 }
 
 .container {
@@ -194,7 +220,7 @@ const currentLanguage = ref('fr');
 }
 
 .menu-item.special {
-  background-color: rgba(224, 168, 13, 0.05);
+  background-color: var(--background-color-var);
   padding: 1rem;
   border-radius: 8px;
   border: 1px solid var(--accent-color);
