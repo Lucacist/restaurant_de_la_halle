@@ -74,12 +74,12 @@
             
             <div class="form-group">
               <label for="date">Date</label>
-              <input type="date" id="date" v-model="form.date">
+              <input type="text" class="custom-date-input" id="date" v-model="form.date" placeholder="JJ/MM/AAAA">
             </div>
             
             <div class="form-group">
               <label for="time">Heure</label>
-              <input type="time" id="time" v-model="form.time">
+              <input type="text" class="custom-time-input" id="time" v-model="form.time" placeholder="HH:MM">
             </div>
             
             <div class="form-group">
@@ -234,6 +234,24 @@ label {
 
 input, select, textarea {
   width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: transparent;
+  color: var(--text-color);
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Styles for custom date and time inputs */
+.custom-date-input,
+.custom-time-input {
+  width: 100%;
+  height: 44px;
   padding: 0.8rem;
   border: 1px solid #ddd;
   border-radius: 4px;
