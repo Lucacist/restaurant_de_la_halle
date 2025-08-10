@@ -36,6 +36,14 @@
             <p><strong>SAMEDI :</strong> 10h00 - 21h00</p>
             <p><strong>DIMANCHE :</strong> 10h00 - 20h30</p>
           </div>
+
+          <div class="reseaux">
+           <h3>Reseaux sociaux</h3>
+           <div class="reseaux-links">
+           <a href="https://facebook.com/profile.php?id=100070603790085&sk=followers" target="_blank"><img src="/img/Facebook_logo.png" alt="Facebook"></a>
+           <a href="https://instagram.com/restodelahalle?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img src="/img/Instagram_logo.png" alt="Instagram"></a>
+          </div>
+          </div>
         </div>
         
         <div class="contact-form">
@@ -178,6 +186,23 @@ h2 {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
   color: var(--text-color);
+}
+
+.reseaux {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.reseaux-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.reseaux img {
+  width: 30px;
+  height: 30px;
 }
 
 .info-item {
