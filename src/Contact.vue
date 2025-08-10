@@ -12,13 +12,13 @@
           
           <div class="info-item">
             <h3>Adresse</h3>
-            <p>123 Rue de la Halle</p>
-            <p>75001 Paris, France</p>
+            <p>Place Isaac Benserade</p>
+            <p>27480 Lyons-la-Forêt, France</p>
           </div>
           
           <div class="info-item">
             <h3>Téléphone</h3>
-            <p>01 23 45 67 89</p>
+            <p>02 32 49 49 92</p>
           </div>
           
           <div class="info-item">
@@ -28,8 +28,13 @@
           
           <div class="info-item">
             <h3>Horaires d'ouverture</h3>
-            <p>Lundi - Vendredi: 12h - 14h30 | 19h - 22h30</p>
-            <p>Samedi - Dimanche: 12h - 15h | 19h - 23h</p>
+            <p><strong>LUNDI :</strong> 8h30 - 20h30</p>
+            <p><strong>MARDI :</strong> 10h00 - 15h00</p>
+            <p><strong>MERCREDI :</strong> FERMÉ</p>
+            <p><strong>JEUDI :</strong> 10h00 - 15h00 / 18h00 - 20h30</p>
+            <p><strong>VENDREDI :</strong> 10h00 - 15h00 / 18h00 - 21h00</p>
+            <p><strong>SAMEDI :</strong> 10h00 - 21h00</p>
+            <p><strong>DIMANCHE :</strong> 10h00 - 20h30</p>
           </div>
         </div>
         
@@ -74,16 +79,23 @@
               <textarea id="message" v-model="form.message" rows="5"></textarea>
             </div>
             
-            <button type="submit" class="submit-button">Envoyer</button>
+            <button type="submit" class="submit-button"><span>Envoyer</span></button>
           </form>
         </div>
       </div>
       
       <div class="map-container">
         <h2>Nous trouver</h2>
-        <div class="map-placeholder">
-          <!-- Ici, vous pourrez intégrer une carte Google Maps -->
-          <p>Carte Google Maps à intégrer ici</p>
+        <div class="map">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2587.3139378329144!2d1.4739557767254577!3d49.39630917141042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e0e2b8d1c3a9f5%3A0x4c0e7f8bc80b3d2f!2sPlace%20Isaac%20Benserade%2C%2027480%20Lyons-la-For%C3%AAt!5e0!3m2!1sfr!2sfr!4v1691676145428!5m2!1sfr!2sfr" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
       </div>
     </div>
@@ -125,31 +137,30 @@ const submitForm = () => {
 <style scoped>
 .contact {
   width: 100%;
+  color: var(--text-color);
 }
 
 .contact-header {
-  background-color: #1a1a1a;
-  color: white;
   text-align: center;
-  padding: 4rem 2rem;
 }
 
 .contact-header h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #e0a80d;
+  color: var(--text-color);
 }
 
 .contact-header p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   max-width: 600px;
   margin: 0 auto;
+  color: var(--text-color);
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 3rem 2rem;
+  padding: 2rem;
 }
 
 .contact-content {
@@ -160,26 +171,13 @@ const submitForm = () => {
 }
 
 .contact-info, .contact-form {
-  background-color: white;
-  border-radius: 8px;
   padding: 2rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
-  color: #333;
-  position: relative;
-}
-
-h2::after {
-  content: '';
-  display: block;
-  width: 50px;
-  height: 3px;
-  background-color: #e0a80d;
-  margin-top: 0.5rem;
+  color: var(--text-color);
 }
 
 .info-item {
@@ -188,13 +186,14 @@ h2::after {
 
 .info-item h3 {
   font-size: 1.2rem;
-  color: #e0a80d;
+  color: var(--text-color);
   margin-bottom: 0.5rem;
 }
 
 .info-item p {
   margin: 0.2rem 0;
-  color: #666;
+  color: var(--text-color);
+  line-height: 1.5;
 }
 
 .form-group {
@@ -205,7 +204,7 @@ label {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 500;
-  color: #333;
+  color: var(--text-color);
 }
 
 input, select, textarea {
@@ -215,53 +214,101 @@ input, select, textarea {
   border-radius: 4px;
   font-family: inherit;
   font-size: 1rem;
+  background-color: transparent;
+  color: var(--text-color);
+  box-sizing: border-box;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent-color, #e0a80d);
+  box-shadow: 0 0 0 2px rgba(224, 168, 13, 0.1);
 }
 
 textarea {
   resize: vertical;
+  min-height: 120px;
 }
 
 .submit-button {
-  background-color: #e0a80d;
-  color: white;
+  background-color: transparent;
+  border: 2px solid var(--text-color);
+  color: var(--text-color);
   padding: 0.8rem 1.5rem;
-  border: none;
   border-radius: 4px;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-button::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--text-color);
+  transition: top 0.3s ease;
+  z-index: 1;
 }
 
 .submit-button:hover {
-  background-color: #c89000;
+  color: var(--background-color);
+}
+
+.submit-button:hover::before {
+  top: 0;
+  
+}
+
+.submit-button span {
+  position: relative;
+  z-index: 2;
+  
 }
 
 .map-container {
   margin-top: 2rem;
 }
 
-.map-placeholder {
-  background-color: #f5f5f5;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.map {
   border-radius: 8px;
-  color: #666;
-  font-style: italic;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.map iframe {
+  display: block;
 }
 
 @media (max-width: 768px) {
+  .contact-header {
+    padding: 3rem 1rem 1.5rem;
+  }
+  
   .contact-header h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+  
+  .container {
+    padding: 1.5rem;
   }
   
   .contact-content {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
   
-  .map-placeholder {
+  .contact-info, .contact-form {
+    padding: 1.5rem;
+  }
+  
+  .map iframe {
     height: 300px;
   }
 }
+
 </style>

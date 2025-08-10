@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <div class="footer-content">
+    <div class="footer-content" v-if="!isContactPage">
       <div class="footer-section">
         <h3>Restaurant de la Halle</h3>
         <p>Une cuisine authentique et raffinée</p>
@@ -29,7 +29,11 @@
 </template>
 
 <script setup>
-// Footer component
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+const isContactPage = computed(() => route.path === '/contact');
 </script>
 
 <style scoped>
