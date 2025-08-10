@@ -141,10 +141,10 @@
             <div class="quote-icon">❝</div>
             <p>
               J’ai adoré ce restaurant. La cuisine était excellente. La purée de
-              patates douces était divine et le gratin dauphinois incroyable. Tarte
-              tatin superbe aussi. Cuisson impeccable. Service très sympathique.
-              Assez rapide bien que ultra plein. Très très contente et
-              agréablement surprise car nous sommes venus là par hasard.
+              patates douces était divine et le gratin dauphinois incroyable.
+              Tarte tatin superbe aussi. Cuisson impeccable. Service très
+              sympathique. Assez rapide bien que ultra plein. Très très contente
+              et agréablement surprise car nous sommes venus là par hasard.
             </p>
             <div class="testimonial-author">
               <h4>Florence FLAIX</h4>
@@ -492,6 +492,16 @@ section h2 {
 
   .secondary-testimonials {
     grid-template-columns: 1fr;
+  }
+
+  .image-placeholder {
+    width: 100%;
+    height: auto;
+  }
+
+  .image-placeholder2 {
+    width: 100%;
+    height: auto;
   }
 }
 </style>
