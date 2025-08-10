@@ -241,7 +241,7 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 0rem 2rem 4rem 2rem;
 }
 
 .letter {
