@@ -51,6 +51,19 @@
             <p class="description" v-if="menu.description">{{ menu.description }}</p>
           </div>
         </div>
+        
+        <div class="payment-info">
+          <p v-if="currentLanguage === 'fr'">
+            CB à partir de 10€<br>
+            La maison n'accepte ni les tickets restaurants ni les chèques vacances.<br>
+            Merci
+          </p>
+          <p v-else>
+            Credit card payments accepted for amounts over 10€<br>
+            The restaurant does not accept meal vouchers or holiday vouchers.<br>
+            Thank you
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -244,5 +257,14 @@ button:focus {
     width: 100%;
     max-width: 120px;
   }
+}
+
+.payment-info {
+  margin-top: 3rem;
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 1px dotted var(--text-color);
+  font-style: italic;
+  opacity: 0.9;
 }
 </style>
