@@ -1,0 +1,226 @@
+{
+  "fr": {
+    "title": "L'Ardoise Éphémère",
+    "sections": [
+      {
+        "name": "Le Début",
+        "items": [
+          {
+            "name": "Le pâté en croûte de poulet",
+            "description": "moutarde à l'ancienne, pleurote au vinaigre de framboise",
+            "price": "15€"
+          },
+          {
+            "name": "L'œuf sous raviole",
+            "description": "crème de champignons et girolles",
+            "price": "16€"
+          },
+          {
+            "name": "Le pied de porc désossé puis pané",
+            "description": "",
+            "price": "18€"
+          },
+          {
+            "name": "Le Vitello Tonato",
+            "description": "",
+            "price": "18€"
+          },
+          {
+            "name": "Le tentacule de poulpe",
+            "description": "beurre de roche",
+            "price": "18€"
+          }
+        ]
+      },
+      {
+        "name": "La Suite",
+        "items": [
+          {
+            "name": "Le faux filet (Français)",
+            "description": "sauce au poivre, gratin Dauphinois",
+            "price": "30€"
+          },
+          {
+            "name": "L'échine de porcelet confit en cocotte",
+            "description": "",
+            "price": "26€"
+          },
+          {
+            "name": "Les rognons de veau au vin blanc",
+            "description": "",
+            "price": "29€"
+          },
+          {
+            "name": "Le filet de canard à l'orange",
+            "description": "polenta crémeuse",
+            "price": "28€"
+          },
+          {
+            "name": "Le tartare de bœuf Charolais",
+            "description": "condiment basilic, tomates et mozzarella bufflonne",
+            "price": "27€"
+          },
+          {
+            "name": "Le thon mi-cuit",
+            "description": "nouilles sautées",
+            "price": "29€"
+          }
+        ]
+      },
+      {
+        "name": "La Fin",
+        "items": [
+          {
+            "name": "Le fromage affiné par nos soins",
+            "description": "",
+            "price": "11€"
+          },
+          {
+            "name": "Le gros chou Profiterole",
+            "description": "",
+            "price": "12€"
+          },
+          {
+            "name": "Le strudel",
+            "description": "",
+            "price": "11€"
+          },
+          {
+            "name": "Le crumble du moment",
+            "description": "",
+            "price": "11€"
+          },
+          {
+            "name": "L'instant T",
+            "description": "",
+            "price": "10€"
+          }
+        ]
+      }
+    ],
+    "menus": [
+      {
+        "name": "Le Menu Enfant",
+        "description": "(- de 12 ans)",
+        "price": "14€"
+      },
+      {
+        "name": "Le Menu Complet",
+        "description": "(Début, Suite, Fin)",
+        "price": "38€"
+      }
+    ]
+  },
+  "en": {
+    "title": "The Ephemeral Slate",
+    "sections": [
+      {
+        "name": "Starters",
+        "items": [
+          {
+            "name": "Chicken pâté en croûte",
+            "description": "old-fashioned mustard",
+            "price": "15€"
+          },
+          {
+            "name": "Soft-boiled egg ravioli",
+            "description": "mushroom and chanterelle cream",
+            "price": "16€"
+          },
+          {
+            "name": "Boneless breaded pig's trotter",
+            "description": "",
+            "price": "18€"
+          },
+          {
+            "name": "Vitello Tonato",
+            "description": "",
+            "price": "18€"
+          },
+          {
+            "name": "Octopus tentacle",
+            "description": "rock butter",
+            "price": "18€"
+          }
+        ]
+      },
+      {
+        "name": "Main Courses",
+        "items": [
+          {
+            "name": "Sirloin steak (French)",
+            "description": "pepper sauce",
+            "price": "30€"
+          },
+          {
+            "name": "Braised suckling pig shoulder",
+            "description": "",
+            "price": "26€"
+          },
+          {
+            "name": "Veal kidneys with white wine",
+            "description": "",
+            "price": "29€"
+          },
+          {
+            "name": "Duck breast with orange",
+            "description": "polenta",
+            "price": "28€"
+          },
+          {
+            "name": "Beef tartare",
+            "description": "basil condiment, tomatoes and buffalo mozzarella",
+            "price": "27€"
+          },
+          {
+            "name": "Seared tuna",
+            "description": "sautéed noodles",
+            "price": "29€"
+          }
+        ]
+      },
+      {
+        "name": "Desserts",
+        "items": [
+          {
+            "name": "Matured cheese selected by us",
+            "description": "",
+            "price": "11€"
+          },
+          {
+            "name": "The big profiterole",
+            "description": "",
+            "price": "12€"
+          },
+          {
+            "name": "Strudel",
+            "description": "",
+            "price": "11€"
+          },
+          {
+            "name": "Crumble",
+            "description": "",
+            "price": "11€"
+          },
+          {
+            "name": "Instant T",
+            "description": "",
+            "price": "10€"
+          }
+        ]
+      }
+    ],
+    "menus": [
+      {
+        "name": "Children's Menu",
+        "description": "(under 12)",
+        "price": "14€"
+      },
+      {
+        "name": "Full Menu",
+        "description": "(starter, main course, dessert)",
+        "price": "38€"
+      }
+    ]
+  }
+}
