@@ -70,7 +70,7 @@ const closeMenu = () => {
 .nav-content {
   display: flex;
   max-width: 1200px;
-  padding: 1rem 0rem;
+  padding: 0.2rem 0rem;
   width: 100%;
   justify-content: space-between;
   align-items: center;
@@ -131,6 +131,7 @@ const closeMenu = () => {
   justify-content: space-around;
   width: 30px;
   height: 20px;
+  padding: 15px;
   cursor: pointer;
   z-index: 1001; /* Pour rester au-dessus du menu mobile */
 }
