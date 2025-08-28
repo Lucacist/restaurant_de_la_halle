@@ -72,14 +72,18 @@
               </select>
             </div>
             
-            <div class="form-group">
+            <div class="form-group date-time-wrapper">
               <label for="date">Date</label>
-              <input type="text" class="custom-date-input" id="date" v-model="form.date" placeholder="JJ/MM/AAAA">
+              <div class="input-container">
+                <input type="date" id="date" v-model="form.date">
+              </div>
             </div>
             
-            <div class="form-group">
+            <div class="form-group date-time-wrapper">
               <label for="time">Heure</label>
-              <input type="text" class="custom-time-input" id="time" v-model="form.time" placeholder="HH:MM">
+              <div class="input-container">
+                <input type="time" id="time" v-model="form.time">
+              </div>
             </div>
             
             <div class="form-group">
@@ -247,12 +251,30 @@ input, select, textarea {
   appearance: none;
 }
 
-/* Styles for custom date and time inputs */
-.custom-date-input,
-.custom-time-input {
+/* Solution complète pour les inputs date/time sur iOS */
+.date-time-wrapper {
+  position: relative;
   width: 100%;
+  display: block;
+}
+
+/* Conteneur pour limiter la largeur des inputs */
+.input-container {
+  position: relative;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+/* Reset complet des styles pour les inputs date et time */
+.input-container input[type="date"],
+.input-container input[type="time"] {
+  position: relative;
+  display: block;
+  width: 100% !important;
   height: 44px;
   padding: 0.8rem;
+  margin: 0;
   border: 1px solid #ddd;
   border-radius: 4px;
   font-family: inherit;
@@ -260,6 +282,43 @@ input, select, textarea {
   background-color: transparent;
   color: var(--text-color);
   box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+/* Hack spécifique pour Safari iOS */
+@supports (-webkit-touch-callout: none) {
+  .input-container input[type="date"],
+  .input-container input[type="time"] {
+    font-size: 16px !important; /* Empêche le zoom sur iOS */
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;
+  }
+  
+  /* Hack pour forcer la largeur */
+  .input-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    pointer-events: none;
+  }
+  
+  /* Hack supplémentaire pour iOS */
+  .input-container {
+    max-width: 100%;
+    overflow: hidden;
+  }
 }
 
 input:focus, select:focus, textarea:focus {
